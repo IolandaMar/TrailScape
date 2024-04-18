@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>TrailScape</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="" name="keywords" />
+    <meta content="" name="description" />
+
+    <!-- Favicon -->
+    <link rel="icon" href="img/logoWT.ico" />
+
+    <!-- GALERIA FOTOS CARDS JavaScript -->
+    <!--
+      <script src="RutesFOTOScard.js"></script> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    -->
+
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Inter:wght@700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Icon Font Stylesheet -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.14.0/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet" />
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet" />
+    <style></style>
+  </head>
+
+  <body>
+    <div class="container-xxl bg-white p-0">
+      <!-- Spinner Start -->
+      <div
+        id="spinner"
+        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center"
+      >
+        <div
+          class="spinner-border text-primary"
+          style="width: 3rem; height: 3rem"
+          role="status"
+        >
+          <span class="sr-only">Loading...</span>
+        </div>
+      </div>
+      <!-- Spinner End -->
+
+    <!-- Navbar Start -->
+<nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
+  <a href="inici.html" class="navbar-brand d-flex align-items-center text-center py-0 px-4 px-lg-5">
+      <img src="img/logoTSB.png" width="40%" alt="TrailScape Logo">
+  </a>
+  <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+      <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarCollapse">
+      <div class="navbar-nav ms-auto p-4 p-lg-0">
+          <a href="inici.html" class="nav-item nav-link">Inici</a>
+          <div class="nav-item dropdown">
+              <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">Rutes</a>
+              <div class="dropdown-menu rounded-0 m-0">
+                  <a href="rutesBici.html" class="dropdown-item active">Rutes en Bicicleta</a>
+                  <a href="rutesSende.html" class="dropdown-item">Rutes de Senderisme</a>
+                  <a href="rutesQuad.html" class="dropdown-item">Rutes en Quad</a>
+              </div>
+          </div>
+              <a href="configUsuari.html" class="nav-item nav-link">Usuari</a>
+          <a href="contacte.html" class="nav-item nav-link">Contacte</a>
+      </div>
+  </div>
+  <form id="searchForm">
+      <input type="text" id="searchInput" placeholder="Cerca...">
+      <button type="submit" class="btn btn-primary btn-sm">Enviar</button> <!-- Reduir el botó d'enviar -->
+  </form>
+  <button id="searchIcon" type="button"><i class="fas fa-search"></i></button> <!-- Mantenir la icona de la lupa al final -->
+</nav>
+
+<!-- Navbar End -->
+      <!--______________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________--->
+      <!--CONTENEDOR CARDS-->
+      <br /><br />
+      <h2 class="texto_h2">RUTES EN BICICLETA</h2>
+      <!--_____________________________________________________________--->
+      <!-- CONTINGUT BODY-->
+      <div class="contenedor_gran_fons">
+        <div class="card_1">
+          <div class="imagen_card_1">
+            <div class="imagen1_card_1">
+              <img src="img\fotos_cards\RUTA_BICI\1.png" alt="Imagen 1" />
+              <div class="mapa_card_1">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m54!1m12!1m3!1d96751.5905899797!2d-3.768230815397932!3d40.72930382038971!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m39!3e1!4m3!3m2!1d40.703961899999996!2d-3.6175382999999997!4m4!2s40.68568673566986%2C%20-3.6111426655448775!3m2!1d40.6856867!2d-3.6111427!4m4!2s40.68604885107238%2C%20-3.6890523832429256!3m2!1d40.686048899999996!2d-3.6890524!4m4!2s40.7709927439114%2C%20-3.665871028512402!3m2!1d40.7709927!2d-3.6658709999999997!4m4!2s40.783300657200286%2C%20-3.686598942972064!3m2!1d40.7833007!2d-3.6865989!4m4!2s40.785382521042784%2C%20-3.6289824144848097!3m2!1d40.7853825!2d-3.6289824!4m4!2s40.73136839426774%2C%20-3.600270365765298!3m2!1d40.7313684!2d-3.6002704!4m3!3m2!1d40.706674199999995!2d-3.6194838999999996!5e0!3m2!1ses!2ses!4v1712300702902!5m2!1ses!2ses" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              </div>
+            </div>
+          </div>
+          <!-- <div class="imagen1_card_1">
+              <img src="img\fotos_cards\RUTA_SENDERISME\1.png " alt="Imagen 2" />
+              <div class="mapa_card_1">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m54!1m12!1m3!1d96751.5905899797!2d-3.768230815397932!3d40.72930382038971!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m39!3e1!4m3!3m2!1d40.703961899999996!2d-3.6175382999999997!4m4!2s40.68568673566986%2C%20-3.6111426655448775!3m2!1d40.6856867!2d-3.6111427!4m4!2s40.68604885107238%2C%20-3.6890523832429256!3m2!1d40.686048899999996!2d-3.6890524!4m4!2s40.7709927439114%2C%20-3.665871028512402!3m2!1d40.7709927!2d-3.6658709999999997!4m4!2s40.783300657200286%2C%20-3.686598942972064!3m2!1d40.7833007!2d-3.6865989!4m4!2s40.785382521042784%2C%20-3.6289824144848097!3m2!1d40.7853825!2d-3.6289824!4m4!2s40.73136839426774%2C%20-3.600270365765298!3m2!1d40.7313684!2d-3.6002704!4m3!3m2!1d40.706674199999995!2d-3.6194838999999996!5e0!3m2!1ses!2ses!4v1712300702902!5m2!1ses!2ses" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              </div>
+            </div> 
+          </div>
+             
+          <button id="prevButton5"><i class="fas fa-chevron-left"></i></button>
+          <button id="nextButton5"><i class="fas fa-chevron-right"></i></button>
+          
+            <script src="C:\Users\imani\OneDrive\Escritorio\TRAILSCAPE\TrailScapeWeb05_04_24\js\RutesFOTOScard.js"></script> -->    
+            
+          
+
+          <div class="card1_1">
+            <div class="text_card1_1">
+              <div class="text_1_1">
+                <a>
+                  Aquesta ruta té les millors vistes i paisatges naturals de la
+                  Comunitat de Madrid. El punt d'inici és a "San Agustín del
+                  Guadalix", exactament al pàrquing de la "Zona Recreativa de
+                  los Patos". Durant la ruta s'haurà de travessar tres ponts per
+                  a arribar a "Charco del Aliso" on ens trobarem la "Cascad
+                  Becera".
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="card1_2">
+            <div class="text_card1_2">
+              <div class="text_1_2">
+                <a>
+                  La zona pel qual es fa la ruta és perillosa, per tant, s'ha
+                  d'anar amb molta cura. A 20 quilòmetres ens trobem al "Puente
+                  de San Antonio", el destí objectiu és "Cascada del Hervidero",
+                  on es podran gaudir d'unes vistes espectaculars.
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card_2">
+          <div class="imagen_card_2">
+            <img src="img\fotos_cards\RUTA_BICI\2.png" />
+            <div class="mapa_card_2">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m63!1m12!1m3!1d98959.24400877053!2d-0.9410703904130612!3d39.18662306009392!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m48!3e1!4m3!3m2!1d39.2379998!2d-0.9590778999999999!4m4!2s39.22918271115747%2C%20-0.9681672120260237!3m2!1d39.229182699999996!2d-0.9681672!4m4!2s39.17973275940699%2C%20-0.9199331538283202!3m2!1d39.1797328!2d-0.9199332!4m4!2s39.1604027389735%2C%20-0.8258864723361417!3m2!1d39.1604027!2d-0.8258865!4m4!2s39.146719693102696%2C%20-0.796147747068314!3m2!1d39.1467197!2d-0.7961477!4m4!2s39.12601846586003%2C%20-0.7882241957080945!3m2!1d39.1260185!2d-0.7882241999999999!4m3!3m2!1d39.1193921!2d-0.7472519!4m4!2s39.15766040336277%2C%20-0.7561758623256764!3m2!1d39.1576604!2d-0.7561759!4m4!2s39.2404722043181%2C%20-0.9515757258765131!3m2!1d39.2404722!2d-0.9515756999999999!4m3!3m2!1d39.23811!2d-0.9590732!5e0!3m2!1ses-419!2ses!4v1712302343244!5m2!1ses-419!2ses" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+          </div>
+          <div class="card2_1">
+            <div class="text_card2_1">
+              <div class="text_2_1">
+                <a>
+                  Aquesta ruta s'inicialitza al poble Valencià, Cortes de
+                  Pallás. Durant la caminada es passarà pel pantà de "Cortes
+                  II", que està regulat, per mantenir la producció d'energia
+                  elèctrica. A més a més, també es podrà gaudir del pic d'àguila
+                  "Ventana del Àguila", situat a 878 metres.</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="card2_2">
+            <div class="text_card2_2">
+              <div class="text_2_2">
+                <a>
+                  La distància d'aquest recorregut és de 85,6 Km, és una ruta
+                  llarga amb molt desnivell, el grau de dificultat és elevat per
+                  a ciclistes principiants. Totes les vistes, converteix aquesta
+                  ruta en una de les millors de la Comunitat Valenciana.</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card_3">
+          <div class="imagen_card_3">
+            <img src="img\fotos_cards\RUTA_BICI\3.png" />
+            <div class="mapa_card_3">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m63!1m12!1m3!1d98959.24400877053!2d-0.9410703904130612!3d39.18662306009392!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m48!3e1!4m3!3m2!1d39.2379998!2d-0.9590778999999999!4m4!2s39.22918271115747%2C%20-0.9681672120260237!3m2!1d39.229182699999996!2d-0.9681672!4m4!2s39.17973275940699%2C%20-0.9199331538283202!3m2!1d39.1797328!2d-0.9199332!4m4!2s39.1604027389735%2C%20-0.8258864723361417!3m2!1d39.1604027!2d-0.8258865!4m4!2s39.146719693102696%2C%20-0.796147747068314!3m2!1d39.1467197!2d-0.7961477!4m4!2s39.12601846586003%2C%20-0.7882241957080945!3m2!1d39.1260185!2d-0.7882241999999999!4m3!3m2!1d39.1193921!2d-0.7472519!4m4!2s39.15766040336277%2C%20-0.7561758623256764!3m2!1d39.1576604!2d-0.7561759!4m4!2s39.2404722043181%2C%20-0.9515757258765131!3m2!1d39.2404722!2d-0.9515756999999999!4m3!3m2!1d39.23811!2d-0.9590732!5e0!3m2!1ses-419!2ses!4v1712302343244!5m2!1ses-419!2ses" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+          </div>
+          <div class="card3_1">
+            <div class="text_card3_1">
+              <div class="text_3_1">
+                <a>
+                  El punt d'inici d'aquesta ruta és La Pobla de Segura, un
+                  municipi ubicat a la comarca del Pallars Jussà. Es
+                  visualitzarà molt paisatge muntanyós a causa del desnivell
+                  elevat. Durant el recorregut hi hauran molts miradors on es
+                  podran gaudir de les vistes.</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="card3_2">
+            <div class="text_card3_2">
+              <div class="text_3_2">
+                <a>
+                  El punt objectiu d'aquest recorregut és Herba-Savina, un antic
+                  poble abandonat, situat a un dels pics més alts del municipi.
+                  Durant la ruta es passarà per cinc pobles contant el punt
+                  d'inici.</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card_4">
+          <div class="imagen_card_4">
+            <img src="img\fotos_cards\RUTA_BICI\4.png" />
+            <div class="mapa_card_4">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m43!1m12!1m3!1d190578.50685317488!2d0.5648972367964081!3d41.725068065422015!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m28!3e1!4m5!1s0x12a6e048e73bd37f%3A0xa0d32ea2d259aaaf!2sLleida!3m2!1d41.617722099999995!2d0.6200205999999999!4m4!2s41.69328719963899%2C%200.8313166395419033!3m2!1d41.6932872!2d0.8313166!4m4!1s0x12a6f402d94a4785%3A0x39cd9f54e610f97b!3m2!1d41.835167399999996!2d0.8423936999999999!4m4!2s41.74966219693016%2C%200.6586243469292612!3m2!1d41.749662199999996!2d0.6586242999999999!4m5!1s0x12a6e048e73bd37f%3A0xa0d32ea2d259aaaf!2sLleida!3m2!1d41.617722099999995!2d0.6200205999999999!5e0!3m2!1ses-419!2ses!4v1712303761175!5m2!1ses-419!2ses" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+          </div>
+          <div class="card4_1">
+            <div class="text_card4_1">
+              <div class="text_4_1">
+                <a>
+                  Durada 2h30m. Ruta molt rodadera i planera, tret dels
+                  turonets, que es molt poc. He aparcat el cotxe a un restaurant
+                  que hi ha a la carretera, no he entrat ni a Balaguer. He anat
+                  a buscar el canal auxiliar d'Urgell i cap al Merengue, que
+                  esta força bé. Després, pel camí he trobat un búnquer.</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="card4_2">
+            <div class="text_card4_2">
+              <div class="text_4_2">
+                <a>
+                  Davant ja tenim el modest tossal de Déu, conegut popularment
+                  com el Merengue per un capità republicà que per animar a la
+                  tropa va dir: Esta montaña nos la vamos a comer com un
+                  Merengue.
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+    <!-- END CONTINGUT BODY-->
+    <!--_____________________________________________________________--->
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br />
+    <!-- Fin del contenedor para los cards -->
+    <!-- Footer Start -->
+    <div
+      class="container-fluid bg-dark text-white-50 footer pt-5 mt-5 wow fadeIn"
+      data-wow-delay="0.1s"
+    >
+      <div class="container py-5">
+        <div class="row g-5">
+          <div class="col-lg-3 col-md-6">
+            <h5 class="text-white mb-4">Contacta'ns</h5>
+            <p class="mb-2">
+              <i class="fa fa-map-marker-alt me-3"></i>Passeig de Gràcia,
+              Barcelona.
+            </p>
+            <p class="mb-2">
+              <i class="fa fa-phone-alt me-3"></i>+34 912 32 03 20
+            </p>
+            <p class="mb-2">
+              <i class="fa fa-envelope me-3"></i>trailscape@gmail.com
+            </p>
+            <div class="d-flex pt-2">
+              <a class="btn btn-outline-light btn-social" href=""
+                ><i class="fab fa-twitter"></i
+              ></a>
+              <a class="btn btn-outline-light btn-social" href=""
+                ><i class="fab fa-youtube"></i
+              ></a>
+              <a class="btn btn-outline-light btn-social" href=""
+                ><i class="fab fa-instagram"></i
+              ></a>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <h5 class="text-white mb-4">Newsletter</h5>
+            <p>Subscriu-te al nostre correu per rebre tota mena de novetats!</p>
+            <div class="position-relative mx-auto" style="max-width: 400px">
+              <input
+                class="form-control bg-transparent w-100 py-3 ps-4 pe-5"
+                type="text"
+                placeholder="Insereix el teu correu"
+              />
+              <button
+                type="button"
+                class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2"
+              >
+                Enviar
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="copyright">
+          <div class="row">
+            <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+              &copy; <a class="border-bottom" href="#">TrailScape</a>, Drets
+              reservats.
+            </div>
+            <div class="col-md-6 text-center text-md-end">
+              <div class="footer-menu">
+                  <a href="inici.html">Inici</a>
+                  <a href="#">Cookies</a>
+                  <a href="#">Ajuda</a>
+                  <a href="contacte.html">FQAs</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Footer End -->
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+  </body>
+</html>

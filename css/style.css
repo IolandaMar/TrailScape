@@ -1,0 +1,2526 @@
+/********** Template CSS **********/
+:root {
+  --primary: #00b074;
+  --secondary: #2b9bff;
+  --light: #effdf5;
+  --dark: #2b3940;
+}
+
+.back-to-top {
+  position: fixed;
+  display: none;
+  right: 45px;
+  bottom: 45px;
+  z-index: 99;
+}
+
+/*** Spinner ***/
+#spinner {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease-out, visibility 0s linear 0.5s;
+  z-index: 99999;
+}
+
+#spinner.show {
+  transition: opacity 0.5s ease-out, visibility 0s linear 0s;
+  visibility: visible;
+  opacity: 1;
+}
+
+/*** Button ***/
+.btn {
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  transition: 0.5s;
+}
+
+.btn.btn-primary,
+.btn.btn-secondary {
+  color: #ffffff;
+}
+
+.btn-square {
+  width: 38px;
+  height: 38px;
+}
+
+.btn-sm-square {
+  width: 32px;
+  height: 32px;
+}
+
+.btn-lg-square {
+  width: 48px;
+  height: 48px;
+}
+
+.btn-square,
+.btn-sm-square,
+.btn-lg-square {
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: normal;
+  border-radius: 2px;
+}
+
+/*** Navbar ***/
+.navbar .dropdown-toggle::after {
+  border: none;
+  content: "\f107";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  vertical-align: middle;
+  margin-left: 5px;
+  transition: 0.5s;
+}
+
+.navbar .dropdown-toggle[aria-expanded="true"]::after {
+  transform: rotate(-180deg);
+}
+
+.navbar-dark .navbar-nav .nav-link,
+.navbar-light .navbar-nav .nav-link {
+  margin-right: 30px;
+  padding: 25px 0;
+  color: #ffffff;
+  font-size: 15px;
+  text-transform: uppercase;
+  outline: none;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-nav .nav-link.active,
+.navbar-light .navbar-nav .nav-link:hover,
+.navbar-light .navbar-nav .nav-link.active {
+  color: var(--primary);
+}
+
+@media (max-width: 991.98px) {
+  .navbar-dark .navbar-nav .nav-link,
+  .navbar-light .navbar-nav .nav-link {
+    margin-right: 0;
+    padding: 10px 0;
+  }
+
+  .navbar-light .navbar-nav {
+    border-top: 1px solid #eeeeee;
+  }
+}
+
+.navbar-light .navbar-brand,
+.navbar-light a.btn {
+  height: 75px;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: var(--dark);
+  font-weight: 500;
+}
+
+.navbar-light.sticky-top {
+  top: -100px;
+  transition: 0.5s;
+}
+
+@media (min-width: 992px) {
+  .navbar .nav-item .dropdown-menu {
+    display: block;
+    top: 100%;
+    margin-top: 0;
+    transform: rotateX(-75deg);
+    transform-origin: 0% 0%;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.5s;
+  }
+
+  .navbar .nav-item:hover .dropdown-menu {
+    transform: rotateX(0deg);
+    visibility: visible;
+    transition: 0.5s;
+    opacity: 1;
+  }
+}
+/*** rutes inici***/
+.col-lg-4 {
+  transition: border 0.3s ease-in-out;
+  border: 1px solid transparent; /* Borde inicial transparente */
+  padding: 15px;
+  margin-bottom: 20px;
+}
+
+.custom-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.cat-item {
+  overflow: hidden;
+  border-radius: 10px;
+  transition: box-shadow 0.3s;
+}
+
+.cat-item:hover {
+  box-shadow: 0 0 10px #3a4e48;
+}
+
+.custom-content {
+  padding: 15px;
+}
+
+.cat-item h2 {
+  margin-bottom: 10px;
+}
+
+.cat-item p {
+  margin-bottom: 15px;
+  text-align: justify;
+}
+
+.cat-item .btn {
+  display: block;
+  margin-top: 10px;
+  border: none;
+  border-radius: 0;
+  background-color: #00b074;
+  color: #fff;
+  transition: background-color 0.3s;
+}
+
+.cat-item .btn:hover {
+  background-color: #00b074;
+}
+
+/*cercador*/
+#searchIcon {
+  order: 3; /* Posicionar la icona de la lupa al final del navbar */
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  padding: 5px;
+  color: #00b074;
+  margin-right: 10px; /* Aproxima la icona de la lupa a l'apartat de contacte */
+}
+
+#searchForm {
+  display: none;
+  align-items: center;
+  margin-right: 10px;
+  order: 2; /* Posicionar el formulari de cerca entre l'apartat de contacte i la icona de la lupa */
+}
+
+#searchInput {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 3px 8px; /* Ajusta el padding per igualar l'alçada */
+  font-size: 16px;
+}
+
+/* Estils per al botó d'enviar */
+#searchForm button[type="submit"] {
+  border: none;
+  background-color: #00b074;
+  color: white;
+  padding: 3px 8px; /* Reduir el padding del botó d'enviar */
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-left: 5px; /* Afegir separació entre el botó d'enviar i el cercador */
+}
+
+#searchForm button[type="submit"]:hover {
+  background-color: #008c5a;
+}
+
+/** ConfigUsuari**/
+.text_h3 {
+  position: relative;
+  max-width: fit-content;
+  left: 6%;
+}
+
+.card {
+  --bg: #f7f7f8;
+  --hover-bg: #ddfff4;
+  --hover-text: #000000;
+  max-width: 23ch;
+  left: 5%;
+  max-height: 23ch;
+  text-align: center;
+  background: var(--bg);
+  padding: 1.5em;
+  padding-block: 1.8em;
+  border-radius: 5px;
+  position: relative;
+  overflow: hidden;
+  transition: 0.3s cubic-bezier(0.6, 0.4, 0, 1), transform 0.15s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+  border: 2px solid black;
+}
+
+.card > :not(span) {
+  transition: 0.3s cubic-bezier(0.6, 0.4, 0, 1);
+}
+
+.card > strong {
+  display: block;
+  font-size: 1.4rem;
+  letter-spacing: -0.035em;
+}
+
+.card span {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--hover-text);
+  border-radius: 5px;
+  font-weight: bold;
+  top: 100%;
+  transition: all 0.3s cubic-bezier(0.6, 0.4, 0, 1);
+}
+
+.card:hover span {
+  top: 0;
+  font-size: 1.2em;
+}
+
+.card:hover {
+  background: var(--hover-bg);
+}
+
+.card:hover > div,
+.card:hover > strong {
+  opacity: 0;
+}
+
+.boton1 {
+  justify-content: center;
+  align-items: center;
+  width: 135px;
+  height: 55px;
+  border-radius: 5px;
+  text-align: center;
+  background-color: #ffffff;
+  transition: background-color 0.6s;
+  font-size: 15px;
+  line-height: 55px;
+  font-weight: bold;
+}
+.boton2 {
+  justify-content: center;
+  align-items: center;
+  width: 135px;
+  height: 55px;
+  border-radius: 5px;
+  text-align: center;
+  background-color: #ffffff;
+  transition: background-color 0.6s;
+  font-size: 15px;
+  line-height: 55px;
+  font-weight: bold;
+}
+.boton3 {
+  justify-content: center;
+  align-items: center;
+  width: 135px;
+  height: 55px;
+  border-radius: 5px;
+  text-align: center;
+  background-color: #ffffff;
+  transition: background-color 0.6s;
+  font-size: 15px;
+  line-height: 55px;
+  font-weight: bold;
+}
+.boton4 {
+  justify-content: center;
+  align-items: center;
+  width: 135px;
+  height: 55px;
+  border-radius: 5px;
+  text-align: center;
+  background-color: #ffffff;
+  transition: background-color 0.6s;
+  font-size: 15px;
+  line-height: 55px;
+  font-weight: bold;
+}
+.boton5 {
+  justify-content: center;
+  align-items: center;
+  width: 135px;
+  height: 55px;
+  border-radius: 5px;
+  text-align: center;
+  background-color: #ffffff;
+  transition: background-color 0.6s;
+  font-size: 15px;
+  line-height: 55px;
+  font-weight: bold;
+}
+.boton1.verde {
+  background-color: #00b074 !important;
+  color: white;
+}
+.boton2.verde {
+  background-color: #00b074 !important;
+  color: white;
+}
+.boton3.verde {
+  background-color: #00b074 !important;
+  color: white;
+}
+.boton4.verde {
+  background-color: #00b074 !important;
+  color: white;
+}
+.boton5.verde {
+  background-color: #00b074 !important;
+  color: white;
+}
+.cajas {
+  position: relative;
+  height: 600px;
+  width: 52%;
+  left: 35%;
+  top: -910px;
+}
+.caja {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  border: 2px solid rgb(255, 255, 255);
+  height: 800px;
+  width: 97%;
+  left: 1%;
+  color: #000000;
+  padding-left: 30px;
+  text-align: left;
+  flex-direction: column;
+  line-height: 50px;
+  background-image: linear-gradient(to bottom, #ddfff4, transparent);
+}
+.titulocaja {
+  padding-top: 10px;
+  text-align: center;
+  font-size: 50px;
+  color: #00b074;
+}
+
+.botones {
+  position: relative;
+  top: -200px;
+  left: 35%;
+  width: 750px;
+  height: 850px;
+}
+.anyadirruta {
+  position: absolute;
+  left: -22%;
+  top: 0;
+  width: 20%;
+  background-color: white;
+  border-radius: 5px;
+}
+
+.popup {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 9999;
+  width: 420px;
+  height: 260px;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.botonimagen {
+  border: none;
+  background-color: white;
+  padding: 0px;
+}
+.botoncerrar {
+  position: absolute;
+  top: 200px;
+  left: 42.2%;
+  height: 35px;
+  font-size: 18px;
+  max-width: 100%;
+  box-sizing: border-box;
+  line-height: 35px;
+  border-radius: 5px;
+}
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+.checkbox {
+  font-size: 25px;
+  padding: 5px;
+}
+.checkbox input[type="checkbox"] {
+  transform: scale(2);
+}
+.buttoncontrasenya {
+  border: none;
+  background-color: transparent;
+  font-size: 25px;
+}
+.buttoncontrasenya:hover {
+  color: #00b074;
+}
+/*____________________________________________________________________________________________________________________________________________*/
+/** APARTAT JOEL CARDS CONFIGURACIÓ: IMAN CSS **/
+
+.card_11 {
+  position: absolute;
+  left: 10%;
+  top: 200px;
+  width: 80%;
+  height: 280px;
+  border: 2px solid rgba(5, 69, 37, 0.494);
+  border-radius: 25px;
+  box-shadow: 10px 10px 10px 10px rgba(5, 69, 37, 0.642);
+  box-shadow: 0 0 10px rgba(5, 69, 37, 0.494),
+    inset 0 0 10px rgba(5, 69, 37, 0.494);
+}
+.card11_11 {
+  position: absolute;
+  top: -100px;
+  left: 2.5%;
+  width: 95%;
+  height: 100px;
+  border: 1px solid rgba(5, 69, 37, 0.494);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s, visibility 0.5s;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  background-image: linear-gradient(
+      to bottom,
+      transparent 0%,
+      rgba(16, 129, 72, 0.555) 100%
+    ),
+    url("img\fotos_cards\RUTA_BICI\1.png");
+  background-size: cover;
+  box-shadow: 5px 5px 5px rgba(16, 129, 72, 0.555);
+  box-shadow: 0 0 10px rgba(16, 129, 72, 0.555),
+    inset 0 0 10px rgba(16, 129, 72, 0.555);
+}
+.card11_22 {
+  /*card extra part de baix*/
+  position: absolute;
+  top: 278px;
+  left: 2.5%;
+  width: 95%;
+  height: 100px;
+  border: 1px solid rgba(5, 69, 37, 0.494);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s, visibility 0.5s;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  background-image: linear-gradient(
+      to top,
+      transparent 0%,
+      rgba(16, 129, 72, 0.555) 100%
+    ),
+    url("img\fotos_cards\RUTA_BICI\1.png");
+  background-size: cover;
+  box-shadow: 5px 5px 5px rgba(16, 129, 72, 0.555);
+  box-shadow: 0 0 10px rgba(16, 129, 72, 0.555),
+    inset 0 0 10px rgba(16, 129, 72, 0.555);
+}
+.card_11:hover .card11_11 {
+  opacity: 1;
+  visibility: visible;
+}
+
+.card_11:hover .card11_22 {
+  opacity: 1;
+  visibility: visible;
+}
+
+.imagen_card_11 {
+  position: relative;
+}
+
+.imagen1_card_11 img {
+  width: 100%;
+  height: 276px;
+  border-radius: 22px;
+}
+
+.text_card11_11 {
+  position: absolute;
+  top: 10px;
+  left: 15px;
+  width: 95%;
+  height: 100px;
+}
+.text_11_11 {
+  color: rgb(58, 58, 58);
+  font-size: 13px;
+  line-height: 20px;
+}
+
+.text_card11_22 {
+  position: absolute;
+  top: 10px;
+  left: 15px;
+  width: 95%;
+  height: 100px;
+}
+.text_11_22 {
+  color: rgb(58, 58, 58);
+  font-size: 13px;
+  line-height: 20px;
+}
+/*_______________________________________________________________*/
+.card_22 {
+  position: absolute;
+  left: 10%;
+  top: 200px;
+  width: 80%;
+  height: 280px;
+  border: 2px solid rgba(5, 69, 37, 0.494);
+  border-radius: 25px;
+  box-shadow: 10px 10px 10px 10px rgba(5, 69, 37, 0.494);
+  box-shadow: 0 0 10px rgba(5, 69, 37, 0.494),
+    inset 0 0 10px rgba(5, 69, 37, 0.494);
+}
+
+.card22_11 {
+  position: absolute;
+  top: -100px;
+  left: 2.5%;
+  width: 95%;
+  height: 100px;
+  border: 1px solid rgba(5, 69, 37, 0.494);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s, visibility 0.5s;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  background-image: linear-gradient(
+      to bottom,
+      transparent 0%,
+      rgba(16, 129, 72, 0.555) 100%
+    ),
+    url("img\fotos_cards\RUTA_BICI\1.png");
+  background-size: cover;
+  box-shadow: 5px 5px 5px rgba(16, 129, 72, 0.555);
+  box-shadow: 0 0 10px rgba(16, 129, 72, 0.555),
+    inset 0 0 10px rgba(16, 129, 72, 0.555);
+}
+.card22_22 {
+  /*card extra part de baix*/
+  position: absolute;
+  top: 278px;
+  left: 2.5%;
+  width: 95%;
+  height: 100px;
+  border: 1px solid rgba(5, 69, 37, 0.494);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s, visibility 0.5s;
+  border-bottom-left-radius: 30px; /*borde esquerre*/
+  border-bottom-right-radius: 30px; /*borde dret*/
+  background-image: linear-gradient(
+      to top,
+      transparent 0%,
+      rgba(16, 129, 72, 0.555) 100%
+    ),
+    url("img\fotos_cards\RUTA_BICI\1.png");
+  background-size: cover;
+  box-shadow: 5px 5px 5px rgba(16, 129, 72, 0.555);
+  box-shadow: 0 0 10px rgba(16, 129, 72, 0.555),
+    inset 0 0 10px rgba(16, 129, 72, 0.555);
+}
+.card_22:hover .card22_11 {
+  opacity: 1;
+  visibility: visible;
+}
+
+.card_22:hover .card22_22 {
+  opacity: 1;
+  visibility: visible;
+}
+
+.imagen_card_22 img {
+  width: 100%;
+  height: 276px;
+  border-radius: 22px;
+}
+
+.text_card22_11 {
+  position: absolute;
+  top: 10px;
+  left: 15px;
+  width: 95%;
+  height: 100px;
+}
+.text_22_11 {
+  color: rgb(58, 58, 58);
+  font-size: 13px;
+  line-height: 20px;
+}
+
+.text_card22_22 {
+  position: absolute;
+  top: 10px;
+  left: 15px;
+  width: 95%;
+  height: 100px;
+}
+.text_22_22 {
+  color: rgb(58, 58, 58);
+  font-size: 13px;
+  line-height: 20px;
+}
+
+/*_______________________________________________________________*/
+
+.card_33 {
+  position: absolute;
+  left: 10%;
+  top: 200px;
+  width: 80%;
+  height: 280px;
+  border: 2px solid rgba(168, 151, 105, 0.545) /*rgb(126, 126, 126)*/;
+  border-radius: 25px;
+  box-shadow: 10px 10px 10px 10px rgba(5, 69, 37, 0.494);
+  box-shadow: 0 0 10px rgba(5, 69, 37, 0.494),
+    inset 0 0 10px rgba(5, 69, 37, 0.494);
+}
+
+.card33_11 {
+  position: absolute;
+  top: -100px;
+  left: 2.5%;
+  width: 95%;
+  height: 100px;
+  border: 1px solid rgba(168, 151, 105, 0.545) /*rgb(126, 126, 126)*/;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s, visibility 0.5s;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  background-image: linear-gradient(
+      to top,
+      transparent 0%,
+      rgba(16, 129, 72, 0.555) 100%
+    ),
+    url("img\fotos_cards\RUTA_BICI\1.png");
+  background-size: cover;
+  box-shadow: 5px 5px 5px rgba(16, 129, 72, 0.555);
+  box-shadow: 0 0 10px rgba(16, 129, 72, 0.555),
+    inset 0 0 10px rgba(16, 129, 72, 0.555);
+}
+.card33_22 {
+  /*card extra part de baix*/
+  position: absolute;
+  top: 278px;
+  left: 2.5%;
+  width: 95%;
+  height: 100px;
+  border: 1px solid rgba(168, 151, 105, 0.545) /*rgb(126, 126, 126)*/ black;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s, visibility 0.5s;
+  border-bottom-left-radius: 30px; /*borde esquerre*/
+  border-bottom-right-radius: 30px; /*borde dret*/
+  background-image: linear-gradient(
+      to top,
+      transparent 0%,
+      rgba(16, 129, 72, 0.555) 100%
+    ),
+    url("img\fotos_cards\RUTA_BICI\1.png");
+  background-size: cover;
+  box-shadow: 5px 5px 5px rgba(16, 129, 72, 0.555);
+  box-shadow: 0 0 10px rgba(16, 129, 72, 0.555),
+    inset 0 0 10px rgba(16, 129, 72, 0.555);
+}
+.card_33:hover .card33_11 {
+  opacity: 1;
+  visibility: visible;
+}
+
+.card_33:hover .card33_22 {
+  opacity: 1;
+  visibility: visible;
+  color: rgba(5, 69, 37, 0.494);
+}
+
+.imagen_card_33 {
+  position: relative;
+}
+
+.imagen_card_33 img {
+  width: 100%;
+  height: 276px;
+  border-radius: 22px;
+}
+
+.text_card33_11 {
+  position: absolute;
+  top: 10px;
+  left: 15px;
+  width: 95%;
+  height: 100px;
+}
+.text_33_11 {
+  color: rgb(58, 58, 58);
+  font-size: 13px;
+  line-height: 20px;
+}
+
+.text_card33_22 {
+  position: absolute;
+  top: 10px;
+  left: 15px;
+  width: 95%;
+  height: 100px;
+}
+.text_33_22 {
+  color: rgb(58, 58, 58);
+  font-size: 13px;
+  line-height: 20px;
+}
+/*_______________________________________________________________*/
+
+.card_44 {
+  position: absolute;
+  left: 10%;
+  top: 600px;
+  width: 80%;
+  height: 280px;
+  border: 2px solid rgba(168, 151, 105, 0.545) /*rgb(126, 126, 126)*/;
+  border-radius: 25px;
+  box-shadow: 10px 10px 10px 10px rgba(5, 69, 37, 0.494);
+  box-shadow: 0 0 10px rgba(5, 69, 37, 0.494),
+    inset 0 0 10px rgba(5, 69, 37, 0.494);
+}
+
+.card44_11 {
+  position: absolute;
+  top: -100px;
+  left: 2.5%;
+  width: 95%;
+  height: 100px;
+  border: 1px solid rgba(168, 151, 105, 0.545) /*rgb(126, 126, 126)*/;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s, visibility 0.5s;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  background-image: linear-gradient(
+      to bottom,
+      transparent 0%,
+      rgba(16, 129, 72, 0.555) 100%
+    ),
+    url("img\fotos_cards\RUTA_BICI\1.png");
+  background-size: cover;
+  box-shadow: 5px 5px 5px rgba(16, 129, 72, 0.555);
+  box-shadow: 0 0 10px rgba(16, 129, 72, 0.555),
+    inset 0 0 10px rgba(16, 129, 72, 0.555);
+}
+.card44_22 {
+  /*card extra part de baix*/
+  position: absolute;
+  top: 278px;
+  left: 2.5%;
+  width: 95%;
+  height: 100px;
+  border: 1px solid rgba(168, 151, 105, 0.545) /*rgb(126, 126, 126)*/;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s, visibility 0.5s;
+  border-bottom-left-radius: 30px; /*borde esquerre*/
+  border-bottom-right-radius: 30px; /*borde dret*/
+  background-image: linear-gradient(
+      to top,
+      transparent 0%,
+      rgba(16, 129, 72, 0.555) 100%
+    ),
+    url("img\fotos_cards\RUTA_BICI\1.png");
+  background-size: cover;
+  box-shadow: 5px 5px 5px rgba(16, 129, 72, 0.555);
+  box-shadow: 0 0 10px rgba(16, 129, 72, 0.555),
+    inset 0 0 10px rgba(16, 129, 72, 0.555);
+}
+.card_44:hover .card44_11 {
+  opacity: 1;
+  visibility: visible;
+}
+
+.card_44:hover .card44_22 {
+  opacity: 1;
+  visibility: visible;
+}
+
+.imagen_card_44 {
+  position: relative;
+}
+
+.imagen_card_44 img {
+  width: 100%;
+  height: 276px;
+  border-radius: 22px;
+}
+
+.text_card44_11 {
+  position: absolute;
+  top: 10px;
+  left: 15px;
+  width: 95%;
+  height: 100px;
+}
+.text_44_11 {
+  color: rgb(58, 58, 58);
+  font-size: 13px;
+  line-height: 20px;
+}
+
+.text_card44_22 {
+  position: absolute;
+  top: 10px;
+  left: 15px;
+  width: 95%;
+  height: 100px;
+}
+.text_44_22 {
+  color: rgb(58, 58, 58);
+  font-size: 13px;
+  line-height: 20px;
+}
+/*_______________________________________________________________*/
+
+.mapa {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  width: 100%;
+  height: 100%;
+  border-radius: 22px;
+}
+.mapa iframe {
+  width: 100%;
+  height: 100%;
+  border-radius: 22px;
+}
+
+.imagen_card_11:hover .mapa {
+  opacity: 1;
+}
+
+.imagen_card_22:hover .mapa {
+  opacity: 1;
+}
+
+.imagen_card_33:hover .mapa {
+  opacity: 1;
+}
+.imagen_card_44:hover .mapa {
+  opacity: 1;
+}
+
+/*___________________________________________________________________________*/
+/*STYLE RUTES BICI IMAN*/
+/*________________________bicileta_style_____________________________________________*/
+.texto_h2 {
+  text-align: center; /* Para alinear el texto al centro */
+  font-size: 5em; /* Tamaño de letra más grande */
+  color: #00b074; /* Cambiar el color del texto a verde */
+}
+
+.contenedor_gran_fons {
+  position: relative;
+  top: -250px;
+}
+
+/*____________________________1ª CARD START________________________________________________*/
+.card_1 {
+  position: absolute;
+  left: 5%;
+  top: 350px;
+  width: 40%;
+  height: 280px;
+  border: 2px solid rgba(5, 69, 37, 0.494);
+  border-radius: 25px;
+  box-shadow: 10px 10px 10px 10px rgba(5, 69, 37, 0.642);
+  box-shadow: 0 0 10px rgba(5, 69, 37, 0.494),
+    inset 0 0 10px rgba(5, 69, 37, 0.494);
+}
+
+.card1_1 {
+  position: absolute;
+  top: -100px;
+  left: 2.5%;
+  width: 95%;
+  height: 100px;
+  border: 1px solid rgba(5, 69, 37, 0.494);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s, visibility 0.5s;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  background-image: linear-gradient(
+      to bottom,
+      transparent 0%,
+      rgba(16, 129, 72, 0.555) 100%
+    ),
+    url("img\fotos_cards\RUTA_BICI\1.png");
+  background-size: cover;
+  box-shadow: 5px 5px 5px rgba(16, 129, 72, 0.555);
+  box-shadow: 0 0 10px rgba(16, 129, 72, 0.555),
+    inset 0 0 10px rgba(16, 129, 72, 0.555);
+}
+
+.card1_2 {
+  /*card extra part de baix*/
+  position: absolute;
+  top: 275px;
+  left: 2.5%;
+  width: 95%;
+  height: 100px;
+  border: 1px solid rgba(5, 69, 37, 0.494);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s, visibility 0.5s;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  background-image: linear-gradient(
+      to top,
+      transparent 0%,
+      rgba(16, 129, 72, 0.555) 100%
+    ),
+    url("img\fotos_cards\RUTA_BICI\1.png");
+  background-size: cover;
+  box-shadow: 5px 5px 5px rgba(16, 129, 72, 0.555);
+  box-shadow: 0 0 10px rgba(16, 129, 72, 0.555),
+    inset 0 0 10px rgba(16, 129, 72, 0.555);
+}
+
+.card_1:hover .card1_1 {
+  opacity: 1;
+  visibility: visible;
+}
+
+.card_1:hover .card1_2 {
+  opacity: 1;
+  visibility: visible;
+}
+
+.imagen_card_1 {
+  position: relative;
+}
+
+.imagen1_card_1 img {
+  width: 100%;
+  height: 276px;
+  border-radius: 22px;
+}
+
+.text_card1_1 {
+  position: absolute;
+  top: 10px;
+  left: 15px;
+  width: 95%;
+  height: 100px;
+}
+.text_1_1 {
+  color: rgb(58, 58, 58);
+  font-size: 13px;
+  text-align: justify; /*per a centrar el text o justificar els bordes*/
+}
+
+.text_card1_2 {
+  position: absolute;
+  top: 10px;
+  left: 15px;
+  width: 95%;
+  height: 100px;
+}
+.text_1_2 {
+  color: rgb(58, 58, 58);
+  font-size: 13px;
+  text-align: justify; /*per a centrar el text o justificar els bordes*/
+}
+
+.mapa_card_1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  width: 100%;
+  height: 276px;
+  border-radius: 22px;
+}
+.mapa_card_1 iframe {
+  width: 100%;
+  height: 276px;
+  border-radius: 22px;
+}
+
+.imagen_card_1:hover .mapa_card_1 {
+  opacity: 1;
+}
+/*__________________________2ª card END___________________________________________*/
+.card_2 {
+  position: absolute;
+  left: 54%;
+  top: 350px;
+  width: 40%;
+  height: 280px;
+  border: 2px solid rgba(5, 69, 37, 0.494);
+  border-radius: 25px; /*ARODONIR LES PUNTES*/
+  box-shadow: 5px 5px 5px rgba(5, 69, 37, 0.494);
+  box-shadow: 0 0 10px rgba(5, 69, 37, 0.494),
+    inset 0 0 10px rgba(5, 69, 37, 0.494);
+}
+
+.card2_1 {
+  position: absolute;
+  top: -100px;
+  left: 2.5%;
+  width: 95%;
+  height: 100px;
+  border: 1px solid rgba(5, 69, 37, 0.494);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s, visibility 0.5s;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  background-image: linear-gradient(
+      to bottom,
+      transparent 0%,
+      rgba(16, 129, 72, 0.555) 100%
+    ),
+    url("img\fotos_cards\RUTA_BICI\2.png");
+  background-size: cover;
+  box-shadow: 5px 5px 5px rgba(16, 129, 72, 0.555);
+  box-shadow: 0 0 10px rgba(16, 129, 72, 0.555),
+    inset 0 0 10px rgba(16, 129, 72, 0.555);
+}
+.card_2:hover .card2_1 {
+  opacity: 1;
+  visibility: visible;
+}
+
+.card2_2 {
+  /*card extra part de baix*/
+  position: absolute;
+  top: 275px;
+  left: 2.5%;
+  width: 95%;
+  height: 100px;
+  border: 1px solid rgba(5, 69, 37, 0.494);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s, visibility 0.5s;
+  border-bottom-left-radius: 30px; /*borde esquerre*/
+  border-bottom-right-radius: 30px; /*borde dret*/
+  background-image: linear-gradient(
+      to top,
+      transparent 0%,
+      rgba(16, 129, 72, 0.555) 100%
+    ),
+    url("img\fotos_cards\RUTA_BICI\2.png");
+  background-size: cover;
+  box-shadow: 5px 5px 5px rgba(16, 129, 72, 0.555);
+  box-shadow: 0 0 10px rgba(16, 129, 72, 0.555),
+    inset 0 0 10px rgba(16, 129, 72, 0.555);
+}
+.card_2:hover .card2_2 {
+  opacity: 1;
+  visibility: visible;
+}
+.imagen_card_2 img {
+  width: 100%;
+  height: 276px;
+  border-radius: 22px;
+}
+.text_card2_1 {
+  position: absolute;
+  top: 10px;
+  left: 15px;
+  width: 95%;
+  height: 100px;
+}
+.text_2_1 {
+  color: rgb(58, 58, 58);
+  font-size: 13px;
+  text-align: justify; /*per a centrar el text o justificar els bordes*/
+}
+
+.text_card2_2 {
+  position: absolute;
+  top: 10px;
+  left: 15px;
+  width: 95%;
+  height: 100px;
+}
+.text_2_2 {
+  color: rgb(58, 58, 58);
+  font-size: 13px;
+  text-align: justify; /*per a centrar el text o justificar els bordes*/
+}
+.mapa_card_2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  width: 100%;
+  height: 276px;
+  border-radius: 22px;
+}
+.mapa_card_2 iframe {
+  width: 100%;
+  height: 276px;
+  border-radius: 22px;
+}
+
+.imagen_card_2:hover .mapa_card_2 {
+  opacity: 1;
+}
+/*__________________________3ª card END___________________________________________*/
+.card_3 {
+  position: absolute;
+  left: 5%;
+  top: 750px;
+  width: 40%;
+  height: 280px;
+  border: 2px solid rgba(168, 151, 105, 0.545) /*rgb(126, 126, 126)*/;
+  border-radius: 25px;
+  box-shadow: 10px 10px 10px 10px rgba(5, 69, 37, 0.642);
+  box-shadow: 0 0 10px rgba(5, 69, 37, 0.494),
+    inset 0 0 10px rgba(5, 69, 37, 0.494);
+}
+
+.card3_1 {
+  position: absolute;
+  top: -100px;
+  left: 2.5%;
+  width: 95%;
+  height: 100px;
+  border: 1px solid rgba(168, 151, 105, 0.545) /*rgb(126, 126, 126)*/;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s, visibility 0.5s;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  background-image: linear-gradient(
+      to bottom,
+      transparent 0%,
+      rgba(16, 129, 72, 0.555) 100%
+    ),
+    url("img\fotos_cards\RUTA_BICI\2.png");
+  background-size: cover;
+  box-shadow: 5px 5px 5px rgba(16, 129, 72, 0.555);
+  box-shadow: 0 0 10px rgba(16, 129, 72, 0.555),
+    inset 0 0 10px rgba(16, 129, 72, 0.555);
+}
+.card_3:hover .card3_1 {
+  opacity: 1;
+  visibility: visible;
+}
+
+.card3_2 {
+  /*card extra part de baix*/
+  position: absolute;
+  top: 275px;
+  left: 2.5%;
+  width: 95%;
+  height: 100px;
+  border: 1px solid rgba(168, 151, 105, 0.545) /*rgb(126, 126, 126)*/;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s, visibility 0.5s;
+  border-bottom-left-radius: 30px; /*borde esquerre*/
+  border-bottom-right-radius: 30px; /*borde dret*/
+  background-image: linear-gradient(
+      to top,
+      transparent 0%,
+      rgba(16, 129, 72, 0.555) 100%
+    ),
+    url("img\fotos_cards\RUTA_BICI\2.png");
+  background-size: cover;
+  box-shadow: 5px 5px 5px rgba(16, 129, 72, 0.555);
+  box-shadow: 0 0 10px rgba(16, 129, 72, 0.555),
+    inset 0 0 10px rgba(16, 129, 72, 0.555);
+}
+.card_3:hover .card3_2 {
+  opacity: 1;
+  visibility: visible;
+}
+.imagen_card_3 img {
+  width: 100%;
+  height: 276px;
+  border-radius: 22px;
+}
+.text_card3_1 {
+  position: absolute;
+  top: 10px;
+  left: 15px;
+  width: 95%;
+  height: 100px;
+}
+.text_3_1 {
+  color: rgb(58, 58, 58);
+  font-size: 13px;
+  text-align: justify; /*per a centrar el text o justificar els bordes*/
+}
+
+.text_card3_2 {
+  position: absolute;
+  top: 10px;
+  left: 15px;
+  width: 95%;
+  height: 100px;
+}
+.text_3_2 {
+  color: rgb(58, 58, 58);
+  font-size: 13px;
+  text-align: justify; /*per a centrar el text o justificar els bordes*/
+}
+.mapa_card_3 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  width: 100%;
+  height: 276px;
+  border-radius: 22px;
+}
+.mapa_card_3 iframe {
+  width: 100%;
+  height: 276px;
+  border-radius: 22px;
+}
+
+.imagen_card_3:hover .mapa_card_3 {
+  opacity: 1;
+}
+/*__________________________4ª card END___________________________________________*/
+.card_4 {
+  position: absolute;
+  left: 54%;
+  top: 750px;
+  width: 40%;
+  height: 280px;
+  border: 2px solid rgba(168, 151, 105, 0.545) /*rgb(126, 126, 126)*/;
+  border-radius: 25px; /*ARODONIR LES PUNTES*/
+  box-shadow: 0 0 10px rgba(168, 151, 105, 0.449),
+    inset 0 0 10px rgba(168, 151, 105, 0.449);
+}
+
+.card4_1 {
+  position: absolute;
+  top: -100px;
+  left: 2.5%;
+  width: 95%;
+  height: 100px;
+  border: 1px solid rgba(168, 151, 105, 0.545) /*rgb(126, 126, 126)*/;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s, visibility 0.5s;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  background-image: linear-gradient(
+      to bottom,
+      transparent 0%,
+      rgba(16, 129, 72, 0.555) 100%
+    ),
+    url("img\fotos_cards\RUTA_BICI\2.png");
+  background-size: cover;
+  box-shadow: 5px 5px 5px rgba(16, 129, 72, 0.555);
+  box-shadow: 0 0 10px rgba(16, 129, 72, 0.555),
+    inset 0 0 10px rgba(16, 129, 72, 0.555);
+}
+.card_4:hover .card4_1 {
+  opacity: 1;
+  visibility: visible;
+}
+
+.card4_2 {
+  /*card extra part de baix*/
+  position: absolute;
+  top: 275px;
+  left: 2.5%;
+  width: 95%;
+  height: 100px;
+  border: 1px solid rgba(168, 151, 105, 0.545) /*rgb(126, 126, 126)*/;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s, visibility 0.5s;
+  border-bottom-left-radius: 30px; /*borde esquerre*/
+  border-bottom-right-radius: 30px; /*borde dret*/
+  background-image: linear-gradient(
+      to top,
+      transparent 0%,
+      rgba(16, 129, 72, 0.555) 100%
+    ),
+    url("img\fotos_cards\RUTA_BICI\2.png");
+  background-size: cover;
+  box-shadow: 5px 5px 5px rgba(16, 129, 72, 0.555);
+  box-shadow: 0 0 10px rgba(16, 129, 72, 0.555),
+    inset 0 0 10px rgba(16, 129, 72, 0.555);
+}
+.card_4:hover .card4_2 {
+  opacity: 1;
+  visibility: visible;
+}
+.imagen_card_4 img {
+  width: 100%;
+  height: 276px;
+  border-radius: 22px;
+}
+.text_card4_1 {
+  position: absolute;
+  top: 10px;
+  left: 15px;
+  width: 95%;
+  height: 100px;
+}
+.text_4_1 {
+  color: rgb(58, 58, 58);
+  font-size: 13px;
+  text-align: justify; /*per a centrar el text o justificar els bordes*/
+}
+
+.text_card4_2 {
+  position: absolute;
+  top: 10px;
+  left: 15px;
+  width: 95%;
+  height: 100px;
+}
+.text_4_2 {
+  color: rgb(58, 58, 58);
+  font-size: 13px;
+  text-align: justify; /*per a centrar el text o justificar els bordes*/
+}
+
+.mapa_card_4 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  width: 100%;
+  height: 276px;
+  border-radius: 22px;
+}
+.mapa_card_4 iframe {
+  width: 100%;
+  height: 276px;
+  border-radius: 22px;
+}
+
+.imagen_card_4:hover .mapa_card_4 {
+  opacity: 1;
+}
+/*________________________END_bicileta_style_____________________________________________*/
+
+/*________________________SENDERISME_style_____________________________________________*/
+.texto_h2_2 {
+  text-align: center; /* Para alinear el texto al centro */
+  font-size: 5em; /* Tamaño de letra más grande */
+  color: #00b074; /* Cambiar el color del texto a verde */
+}
+
+.contenedor_gran_fons {
+  position: relative;
+  top: -250px;
+}
+
+/*____________________________5ª CARD START________________________________________________*/
+.card_5 {
+  position: absolute;
+  left: 5%;
+  top: 350px;
+  width: 40%;
+  height: 280px;
+  border: 2px solid rgba(5, 69, 37, 0.494);
+  border-radius: 25px;
+  box-shadow: 10px 10px 10px 10px rgba(5, 69, 37, 0.642);
+  box-shadow: 0 0 10px rgba(5, 69, 37, 0.494),
+    inset 0 0 10px rgba(5, 69, 37, 0.494);
+}
+
+.card5_1 {
+  position: absolute;
+  top: -100px;
+  left: 2.5%;
+  width: 95%;
+  height: 100px;
+  border: 1px solid rgba(5, 69, 37, 0.494);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s, visibility 0.5s;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  background-image: linear-gradient(
+      to bottom,
+      transparent 0%,
+      rgba(16, 129, 72, 0.555) 100%
+    ),
+    url("img\fotos_cards\RUTA_BICI\1.png");
+  background-size: cover;
+  box-shadow: 5px 5px 5px rgba(16, 129, 72, 0.555);
+  box-shadow: 0 0 10px rgba(16, 129, 72, 0.555),
+    inset 0 0 10px rgba(16, 129, 72, 0.555);
+}
+
+.card5_2 {
+  /*card extra part de baix*/
+  position: absolute;
+  top: 275px;
+  left: 2.5%;
+  width: 95%;
+  height: 100px;
+  border: 1px solid rgba(5, 69, 37, 0.494);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s, visibility 0.5s;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  background-image: linear-gradient(
+      to top,
+      transparent 0%,
+      rgba(16, 129, 72, 0.555) 100%
+    ),
+    url("img\fotos_cards\RUTA_BICI\1.png");
+  background-size: cover;
+  box-shadow: 5px 5px 5px rgba(16, 129, 72, 0.555);
+  box-shadow: 0 0 10px rgba(16, 129, 72, 0.555),
+    inset 0 0 10px rgba(16, 129, 72, 0.555);
+}
+
+.card_5:hover .card5_1 {
+  opacity: 1;
+  visibility: visible;
+}
+
+.card_5:hover .card5_2 {
+  opacity: 1;
+  visibility: visible;
+}
+
+.imagen_card_5 {
+  position: relative;
+}
+
+.imagen1_card_5 img {
+  width: 100%;
+  height: 276px;
+  border-radius: 22px;
+}
+
+.text_card5_1 {
+  position: absolute;
+  top: 10px;
+  left: 15px;
+  width: 95%;
+  height: 100px;
+}
+.text_5_1 {
+  color: rgb(58, 58, 58);
+  font-size: 13px;
+  text-align: justify; /*per a centrar el text o justificar els bordes*/
+}
+
+.text_card5_2 {
+  position: absolute;
+  top: 10px;
+  left: 15px;
+  width: 95%;
+  height: 100px;
+}
+.text_5_2 {
+  color: rgb(58, 58, 58);
+  font-size: 13px;
+  text-align: justify; /*per a centrar el text o justificar els bordes*/
+}
+
+.mapa_card_5 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  width: 100%;
+  height: 276px;
+  border-radius: 22px;
+}
+.mapa_card_5 iframe {
+  width: 100%;
+  height: 276px;
+  border-radius: 22px;
+}
+
+.imagen_card_5:hover .mapa_card_5 {
+  opacity: 1;
+}
+/*__________________________6ª card END___________________________________________*/
+.card_6 {
+  position: absolute;
+  left: 54%;
+  top: 350px;
+  width: 40%;
+  height: 280px;
+  border: 2px solid rgba(5, 69, 37, 0.494);
+  border-radius: 25px; /*ARODONIR LES PUNTES*/
+  box-shadow: 5px 5px 5px rgba(5, 69, 37, 0.494);
+  box-shadow: 0 0 10px rgba(5, 69, 37, 0.494),
+    inset 0 0 10px rgba(5, 69, 37, 0.494);
+}
+
+.card6_1 {
+  position: absolute;
+  top: -100px;
+  left: 2.5%;
+  width: 95%;
+  height: 100px;
+  border: 1px solid rgba(5, 69, 37, 0.494);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s, visibility 0.5s;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  background-image: linear-gradient(
+      to bottom,
+      transparent 0%,
+      rgba(16, 129, 72, 0.555) 100%
+    ),
+    url("img\fotos_cards\RUTA_BICI\2.png");
+  background-size: cover;
+  box-shadow: 5px 5px 5px rgba(16, 129, 72, 0.555);
+  box-shadow: 0 0 10px rgba(16, 129, 72, 0.555),
+    inset 0 0 10px rgba(16, 129, 72, 0.555);
+}
+.card_6:hover .card6_1 {
+  opacity: 1;
+  visibility: visible;
+}
+
+.card6_2 {
+  /*card extra part de baix*/
+  position: absolute;
+  top: 275px;
+  left: 2.5%;
+  width: 95%;
+  height: 100px;
+  border: 1px solid rgba(5, 69, 37, 0.494);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s, visibility 0.5s;
+  border-bottom-left-radius: 30px; /*borde esquerre*/
+  border-bottom-right-radius: 30px; /*borde dret*/
+  background-image: linear-gradient(
+      to top,
+      transparent 0%,
+      rgba(16, 129, 72, 0.555) 100%
+    ),
+    url("img\fotos_cards\RUTA_BICI\2.png");
+  background-size: cover;
+  box-shadow: 5px 5px 5px rgba(16, 129, 72, 0.555);
+  box-shadow: 0 0 10px rgba(16, 129, 72, 0.555),
+    inset 0 0 10px rgba(16, 129, 72, 0.555);
+}
+.card_6:hover .card6_2 {
+  opacity: 1;
+  visibility: visible;
+}
+.imagen_card_6 img {
+  width: 100%;
+  height: 276px;
+  border-radius: 22px;
+}
+.text_card6_1 {
+  position: absolute;
+  top: 10px;
+  left: 15px;
+  width: 95%;
+  height: 100px;
+}
+.text_6_1 {
+  color: rgb(58, 58, 58);
+  font-size: 13px;
+  text-align: justify; /*per a centrar el text o justificar els bordes*/
+}
+
+.text_card6_2 {
+  position: absolute;
+  top: 10px;
+  left: 15px;
+  width: 95%;
+  height: 100px;
+}
+.text_6_2 {
+  color: rgb(58, 58, 58);
+  font-size: 13px;
+  text-align: justify; /*per a centrar el text o justificar els bordes*/
+}
+.mapa_card_6 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  width: 100%;
+  height: 276px;
+  border-radius: 22px;
+}
+.mapa_card_6 iframe {
+  width: 100%;
+  height: 276px;
+  border-radius: 22px;
+}
+
+.imagen_card_6:hover .mapa_card_6 {
+  opacity: 1;
+}
+/*__________________________7ª card END___________________________________________*/
+.card_7 {
+  position: absolute;
+  left: 5%;
+  top: 750px;
+  width: 40%;
+  height: 280px;
+  border: 2px solid rgba(168, 151, 105, 0.545) /*rgb(126, 126, 126)*/;
+  border-radius: 25px;
+  box-shadow: 10px 10px 10px 10px rgba(5, 69, 37, 0.494);
+  box-shadow: 0 0 10px rgba(5, 69, 37, 0.494),
+    inset 0 0 10px rgba(5, 69, 37, 0.494);
+}
+
+.card7_1 {
+  position: absolute;
+  top: -100px;
+  left: 2.5%;
+  width: 95%;
+  height: 100px;
+  border: 1px solid rgba(168, 151, 105, 0.545) /*rgb(126, 126, 126)*/;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s, visibility 0.5s;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  background-image: linear-gradient(
+      to bottom,
+      transparent 0%,
+      rgba(16, 129, 72, 0.555) 100%
+    ),
+    url("img\fotos_cards\RUTA_BICI\1.png");
+  background-size: cover;
+  box-shadow: 5px 5px 5px rgba(16, 129, 72, 0.555);
+  box-shadow: 0 0 10px rgba(16, 129, 72, 0.555),
+    inset 0 0 10px rgba(16, 129, 72, 0.555);
+}
+.card_7:hover .card7_1 {
+  opacity: 1;
+  visibility: visible;
+}
+
+.card7_2 {
+  /*card extra part de baix*/
+  position: absolute;
+  top: 275px;
+  left: 2.5%;
+  width: 95%;
+  height: 100px;
+  border: 1px solid rgba(168, 151, 105, 0.545) /*rgb(126, 126, 126)*/;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s, visibility 0.5s;
+  border-bottom-left-radius: 30px; /*borde esquerre*/
+  border-bottom-right-radius: 30px; /*borde dret*/
+  background-image: linear-gradient(
+      to top,
+      transparent 0%,
+      rgba(16, 129, 72, 0.555) 100%
+    ),
+    url("img\fotos_cards\RUTA_BICI\1.png");
+  background-size: cover;
+  box-shadow: 5px 5px 5px rgba(16, 129, 72, 0.555);
+  box-shadow: 0 0 10px rgba(16, 129, 72, 0.555),
+    inset 0 0 10px rgba(16, 129, 72, 0.555);
+}
+.card_7:hover .card7_2 {
+  opacity: 1;
+  visibility: visible;
+}
+.imagen_card_7 img {
+  width: 100%;
+  height: 276px;
+  border-radius: 22px;
+}
+.text_card7_1 {
+  position: absolute;
+  top: 10px;
+  left: 15px;
+  width: 95%;
+  height: 100px;
+}
+.text_7_1 {
+  color: rgb(58, 58, 58);
+  font-size: 13px;
+  text-align: justify; /*per a centrar el text o justificar els bordes*/
+}
+
+.text_card7_2 {
+  position: absolute;
+  top: 10px;
+  left: 15px;
+  width: 95%;
+  height: 100px;
+}
+.text_7_2 {
+  color: rgb(58, 58, 58);
+  font-size: 13px;
+  text-align: justify; /*per a centrar el text o justificar els bordes*/
+}
+.mapa_card_7 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  width: 100%;
+  height: 276px;
+  border-radius: 22px;
+}
+.mapa_card_7 iframe {
+  width: 100%;
+  height: 276px;
+  border-radius: 22px;
+}
+
+.imagen_card_7:hover .mapa_card_7 {
+  opacity: 1;
+}
+/*__________________________8ª card END___________________________________________*/
+.card_8 {
+  position: absolute;
+  left: 54%;
+  top: 750px;
+  width: 40%;
+  height: 280px;
+  border: 2px solid rgba(168, 151, 105, 0.545) /*rgb(126, 126, 126)*/;
+  border-radius: 25px; /*ARODONIR LES PUNTES*/
+  box-shadow: 10px 10px 10px 10px rgba(5, 69, 37, 0.494);
+  box-shadow: 0 0 10px rgba(5, 69, 37, 0.494),
+    inset 0 0 10px rgba(5, 69, 37, 0.494);
+}
+
+.card8_1 {
+  position: absolute;
+  top: -100px;
+  left: 2.5%;
+  width: 95%;
+  height: 100px;
+  border: 1px solid rgba(168, 151, 105, 0.545) /*rgb(126, 126, 126)*/;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s, visibility 0.5s;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  background-image: linear-gradient(
+      to bottom,
+      transparent 0%,
+      rgba(16, 129, 72, 0.555) 100%
+    ),
+    url("img\fotos_cards\RUTA_BICI\1.png");
+  background-size: cover;
+  box-shadow: 5px 5px 5px rgba(16, 129, 72, 0.555);
+  box-shadow: 0 0 10px rgba(16, 129, 72, 0.555),
+    inset 0 0 10px rgba(16, 129, 72, 0.555);
+}
+.card_8:hover .card8_1 {
+  opacity: 1;
+  visibility: visible;
+}
+
+.card8_2 {
+  /*card extra part de baix*/
+  position: absolute;
+  top: 275px;
+  left: 2.5%;
+  width: 95%;
+  height: 100px;
+  border: 1px solid rgba(168, 151, 105, 0.545) /*rgb(126, 126, 126)*/;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s, visibility 0.5s;
+  border-bottom-left-radius: 30px; /*borde esquerre*/
+  border-bottom-right-radius: 30px; /*borde dret*/
+  background-image: linear-gradient(
+      to top,
+      transparent 0%,
+      rgba(16, 129, 72, 0.555) 100%
+    ),
+    url("img\fotos_cards\RUTA_BICI\1.png");
+  background-size: cover;
+  box-shadow: 5px 5px 5px rgba(16, 129, 72, 0.555);
+  box-shadow: 0 0 10px rgba(16, 129, 72, 0.555),
+    inset 0 0 10px rgba(16, 129, 72, 0.555);
+}
+.card_8:hover .card8_2 {
+  opacity: 1;
+  visibility: visible;
+}
+.imagen_card_8 img {
+  width: 100%;
+  height: 276px;
+  border-radius: 22px;
+}
+.text_card8_1 {
+  position: absolute;
+  top: 10px;
+  left: 15px;
+  width: 95%;
+  height: 100px;
+}
+.text_8_1 {
+  color: rgb(58, 58, 58);
+  font-size: 13px;
+  text-align: justify; /*per a centrar el text o justificar els bordes*/
+}
+
+.text_card8_2 {
+  position: absolute;
+  top: 10px;
+  left: 15px;
+  width: 95%;
+  height: 100px;
+}
+.text_8_2 {
+  color: rgb(58, 58, 58);
+  font-size: 13px;
+  text-align: justify; /*per a centrar el text o justificar els bordes*/
+}
+
+.mapa_card_8 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  width: 100%;
+  height: 276px;
+  border-radius: 22px;
+}
+.mapa_card_8 iframe {
+  width: 100%;
+  height: 276px;
+  border-radius: 22px;
+}
+
+.imagen_card_8:hover .mapa_card_8 {
+  opacity: 1;
+}
+/*________________________END_SENDERISME_style_____________________________________________*/
+
+/*________________________QUAD_style_____________________________________________*/
+.texto_h2_3 {
+  text-align: center; /* Para alinear el texto al centro */
+  font-size: 5em; /* Tamaño de letra más grande */
+  color: #00b074; /* Cambiar el color del texto a verde */
+}
+
+.contenedor_gran_fons {
+  position: relative;
+  top: -250px;
+}
+
+/*____________________________50ª CARD START________________________________________________*/
+.card_50 {
+  position: absolute;
+  left: 5%;
+  top: 350px;
+  width: 40%;
+  height: 280px;
+  border: 2px solid rgba(5, 69, 37, 0.494);
+  border-radius: 25px;
+  box-shadow: 10px 10px 10px 10px rgba(5, 69, 37, 0.642);
+  box-shadow: 0 0 10px rgba(5, 69, 37, 0.494),
+    inset 0 0 10px rgba(5, 69, 37, 0.494);
+}
+
+.card50_1 {
+  position: absolute;
+  top: -100px;
+  left: 2.5%;
+  width: 95%;
+  height: 100px;
+  border: 1px solid rgba(5, 69, 37, 0.494);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s, visibility 0.5s;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  background-image: linear-gradient(
+      to bottom,
+      transparent 0%,
+      rgba(16, 129, 72, 0.555) 100%
+    ),
+    url("img\fotos_cards\RUTA_BICI\1.png");
+  background-size: cover;
+  box-shadow: 5px 5px 5px rgba(16, 129, 72, 0.555);
+  box-shadow: 0 0 10px rgba(16, 129, 72, 0.555),
+    inset 0 0 10px rgba(16, 129, 72, 0.555);
+}
+
+.card50_2 {
+  /*card extra part de baix*/
+  position: absolute;
+  top: 275px;
+  left: 2.5%;
+  width: 95%;
+  height: 100px;
+  border: 1px solid rgba(5, 69, 37, 0.494);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s, visibility 0.5s;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  background-image: linear-gradient(
+      to top,
+      transparent 0%,
+      rgba(16, 129, 72, 0.555) 100%
+    ),
+    url("img\fotos_cards\RUTA_BICI\1.png");
+  background-size: cover;
+  box-shadow: 5px 5px 5px rgba(16, 129, 72, 0.555);
+  box-shadow: 0 0 10px rgba(16, 129, 72, 0.555),
+    inset 0 0 10px rgba(16, 129, 72, 0.555);
+}
+
+.card_50:hover .card50_1 {
+  opacity: 1;
+  visibility: visible;
+}
+
+.card_50:hover .card50_2 {
+  opacity: 1;
+  visibility: visible;
+}
+
+.imagen_card_50 {
+  position: relative;
+}
+
+.imagen_card_50 img {
+  width: 100%;
+  height: 276px;
+  border-radius: 22px;
+}
+
+.text_card50_1 {
+  position: absolute;
+  top: 10px;
+  left: 15px;
+  width: 95%;
+  height: 100px;
+}
+.text_50_1 {
+  color: rgb(58, 58, 58);
+  font-size: 13px;
+  text-align: justify; /*per a centrar el text o justificar els bordes*/
+}
+
+.text_card50_2 {
+  position: absolute;
+  top: 10px;
+  left: 15px;
+  width: 95%;
+  height: 100px;
+}
+.text_50_2 {
+  color: rgb(58, 58, 58);
+  font-size: 13px;
+  text-align: justify; /*per a centrar el text o justificar els bordes*/
+}
+
+.mapa_card_50 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  width: 100%;
+  height: 276px;
+  border-radius: 22px;
+}
+.mapa_card_50 iframe {
+  width: 100%;
+  height: 276px;
+  border-radius: 22px;
+}
+
+.imagen_card_50:hover .mapa_card_50 {
+  opacity: 1;
+}
+/*__________________________6ª card END___________________________________________*/
+.card_60 {
+  position: absolute;
+  left: 54%;
+  top: 350px;
+  width: 40%;
+  height: 280px;
+  border: 2px solid rgba(5, 69, 37, 0.494);
+  border-radius: 25px; /*ARODONIR LES PUNTES*/
+  box-shadow: 5px 5px 5px rgba(5, 69, 37, 0.494);
+  box-shadow: 0 0 10px rgba(5, 69, 37, 0.494),
+    inset 0 0 10px rgba(5, 69, 37, 0.494);
+}
+
+.card60_1 {
+  position: absolute;
+  top: -100px;
+  left: 2.5%;
+  width: 95%;
+  height: 100px;
+  border: 1px solid rgba(5, 69, 37, 0.494);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s, visibility 0.5s;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  background-image: linear-gradient(
+      to bottom,
+      transparent 0%,
+      rgba(16, 129, 72, 0.555) 100%
+    ),
+    url("img\fotos_cards\RUTA_BICI\2.png");
+  background-size: cover;
+  box-shadow: 5px 5px 5px rgba(16, 129, 72, 0.555);
+  box-shadow: 0 0 10px rgba(16, 129, 72, 0.555),
+    inset 0 0 10px rgba(16, 129, 72, 0.555);
+}
+.card_60:hover .card60_1 {
+  opacity: 1;
+  visibility: visible;
+}
+
+.card60_2 {
+  /*card extra part de baix*/
+  position: absolute;
+  top: 275px;
+  left: 2.5%;
+  width: 95%;
+  height: 100px;
+  border: 1px solid rgba(5, 69, 37, 0.494);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s, visibility 0.5s;
+  border-bottom-left-radius: 30px; /*borde esquerre*/
+  border-bottom-right-radius: 30px; /*borde dret*/
+  background-image: linear-gradient(
+      to top,
+      transparent 0%,
+      rgba(16, 129, 72, 0.555) 100%
+    ),
+    url("img\fotos_cards\RUTA_BICI\2.png");
+  background-size: cover;
+  box-shadow: 5px 5px 5px rgba(16, 129, 72, 0.555);
+  box-shadow: 0 0 10px rgba(16, 129, 72, 0.555),
+    inset 0 0 10px rgba(16, 129, 72, 0.555);
+}
+.card_60:hover .card60_2 {
+  opacity: 1;
+  visibility: visible;
+}
+.imagen_card_60 img {
+  width: 100%;
+  height: 276px;
+  border-radius: 22px;
+}
+.text_card60_1 {
+  position: absolute;
+  top: 10px;
+  left: 15px;
+  width: 95%;
+  height: 100px;
+}
+.text_60_1 {
+  color: rgb(58, 58, 58);
+  font-size: 13px;
+  text-align: justify; /*per a centrar el text o justificar els bordes*/
+}
+
+.text_card60_2 {
+  position: absolute;
+  top: 10px;
+  left: 15px;
+  width: 95%;
+  height: 100px;
+}
+.text_60_2 {
+  color: rgb(58, 58, 58);
+  font-size: 13px;
+  text-align: justify; /*per a centrar el text o justificar els bordes*/
+}
+.mapa_card_60 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  width: 100%;
+  height: 276px;
+  border-radius: 22px;
+}
+.mapa_card_60 iframe {
+  width: 100%;
+  height: 276px;
+  border-radius: 22px;
+}
+
+.imagen_card_60:hover .mapa_card_60 {
+  opacity: 1;
+}
+/*__________________________7ª card END___________________________________________*/
+.card_70 {
+  position: absolute;
+  left: 5%;
+  top: 750px;
+  width: 40%;
+  height: 280px;
+  border: 2px solid rgba(168, 151, 105, 0.545) /*rgb(126, 126, 126)*/;
+  border-radius: 25px;
+  box-shadow: 10px 10px 10px 10px rgba(5, 69, 37, 0.494);
+  box-shadow: 0 0 10px rgba(5, 69, 37, 0.494),
+    inset 0 0 10px rgba(5, 69, 37, 0.494);
+}
+
+.card70_1 {
+  position: absolute;
+  top: -100px;
+  left: 2.5%;
+  width: 95%;
+  height: 100px;
+  border: 1px solid rgba(168, 151, 105, 0.545) /*rgb(126, 126, 126)*/;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s, visibility 0.5s;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  background-image: linear-gradient(
+      to bottom,
+      transparent 0%,
+      rgba(16, 129, 72, 0.555) 100%
+    ),
+    url("img\fotos_cards\RUTA_BICI\1.png");
+  background-size: cover;
+  box-shadow: 5px 5px 5px rgba(16, 129, 72, 0.555);
+  box-shadow: 0 0 10px rgba(16, 129, 72, 0.555),
+    inset 0 0 10px rgba(16, 129, 72, 0.555);
+}
+.card_70:hover .card70_1 {
+  opacity: 1;
+  visibility: visible;
+}
+
+.card70_2 {
+  /*card extra part de baix*/
+  position: absolute;
+  top: 275px;
+  left: 2.5%;
+  width: 95%;
+  height: 100px;
+  border: 1px solid rgba(168, 151, 105, 0.545) /*rgb(126, 126, 126)*/;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s, visibility 0.5s;
+  border-bottom-left-radius: 30px; /*borde esquerre*/
+  border-bottom-right-radius: 30px; /*borde dret*/
+  background-image: linear-gradient(
+      to top,
+      transparent 0%,
+      rgba(16, 129, 72, 0.555) 100%
+    ),
+    url("img\fotos_cards\RUTA_BICI\1.png");
+  background-size: cover;
+  box-shadow: 5px 5px 5px rgba(16, 129, 72, 0.555);
+  box-shadow: 0 0 10px rgba(16, 129, 72, 0.555),
+    inset 0 0 10px rgba(16, 129, 72, 0.555);
+}
+.card_70:hover .card70_2 {
+  opacity: 1;
+  visibility: visible;
+}
+.imagen_card_70 img {
+  width: 100%;
+  height: 276px;
+  border-radius: 22px;
+}
+.text_card70_1 {
+  position: absolute;
+  top: 10px;
+  left: 15px;
+  width: 95%;
+  height: 100px;
+}
+.text_70_1 {
+  color: rgb(58, 58, 58);
+  font-size: 13px;
+  text-align: justify; /*per a centrar el text o justificar els bordes*/
+}
+
+.text_card70_2 {
+  position: absolute;
+  top: 10px;
+  left: 15px;
+  width: 95%;
+  height: 100px;
+}
+.text_70_2 {
+  color: rgb(58, 58, 58);
+  font-size: 13px;
+  text-align: justify; /*per a centrar el text o justificar els bordes*/
+}
+.mapa_card_70 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  width: 100%;
+  height: 276px;
+  border-radius: 22px;
+}
+.mapa_card_70 iframe {
+  width: 100%;
+  height: 276px;
+  border-radius: 22px;
+}
+
+.imagen_card_70:hover .mapa_card_70 {
+  opacity: 1;
+}
+/*__________________________8ª card END___________________________________________*/
+.card_80 {
+  position: absolute;
+  left: 54%;
+  top: 750px;
+  width: 40%;
+  height: 280px;
+  border: 2px solid rgba(168, 151, 105, 0.545) /*rgb(126, 126, 126)*/;
+  border-radius: 25px; /*ARODONIR LES PUNTES*/
+  box-shadow: 10px 10px 10px 10px rgba(5, 69, 37, 0.494);
+  box-shadow: 0 0 10px rgba(5, 69, 37, 0.494),
+    inset 0 0 10px rgba(5, 69, 37, 0.494);
+}
+
+.card80_1 {
+  position: absolute;
+  top: -100px;
+  left: 2.5%;
+  width: 95%;
+  height: 100px;
+  border: 1px solid rgba(168, 151, 105, 0.545) /*rgb(126, 126, 126)*/;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s, visibility 0.5s;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  background-image: linear-gradient(
+      to bottom,
+      transparent 0%,
+      rgba(16, 129, 72, 0.555) 100%
+    ),
+    url("img\fotos_cards\RUTA_BICI\1.png");
+  background-size: cover;
+  box-shadow: 5px 5px 5px rgba(16, 129, 72, 0.555);
+  box-shadow: 0 0 10px rgba(16, 129, 72, 0.555),
+    inset 0 0 10px rgba(16, 129, 72, 0.555);
+}
+.card_80:hover .card80_1 {
+  opacity: 1;
+  visibility: visible;
+}
+
+.card80_2 {
+  /*card extra part de baix*/
+  position: absolute;
+  top: 275px;
+  left: 2.5%;
+  width: 95%;
+  height: 100px;
+  border: 1px solid rgba(168, 151, 105, 0.545) /*rgb(126, 126, 126)*/;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s, visibility 0.5s;
+  border-bottom-left-radius: 30px; /*borde esquerre*/
+  border-bottom-right-radius: 30px; /*borde dret*/
+  background-image: linear-gradient(
+      to top,
+      transparent 0%,
+      rgba(16, 129, 72, 0.555) 100%
+    ),
+    url("img\fotos_cards\RUTA_BICI\1.png");
+  background-size: cover;
+  box-shadow: 5px 5px 5px rgba(16, 129, 72, 0.555);
+  box-shadow: 0 0 10px rgba(16, 129, 72, 0.555),
+    inset 0 0 10px rgba(16, 129, 72, 0.555);
+}
+.card_80:hover .card80_2 {
+  opacity: 1;
+  visibility: visible;
+}
+.imagen_card_80 img {
+  width: 100%;
+  height: 276px;
+  border-radius: 22px;
+}
+.text_card80_1 {
+  position: absolute;
+  top: 10px;
+  left: 15px;
+  width: 95%;
+  height: 100px;
+}
+.text_80_1 {
+  color: rgb(58, 58, 58);
+  font-size: 13px;
+  text-align: justify; /*per a centrar el text o justificar els bordes*/
+}
+
+.text_card80_2 {
+  position: absolute;
+  top: 10px;
+  left: 15px;
+  width: 95%;
+  height: 100px;
+}
+.text_80_2 {
+  color: rgb(58, 58, 58);
+  font-size: 13px;
+  text-align: justify; /*per a centrar el text o justificar els bordes*/
+}
+
+.mapa_card_80 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  width: 100%;
+  height: 276px;
+  border-radius: 22px;
+}
+.mapa_card_80 iframe {
+  width: 100%;
+  height: 276px;
+  border-radius: 22px;
+}
+
+.imagen_card_80:hover .mapa_card_80 {
+  opacity: 1;
+}
+/*________________________END_MOTO4_style_____________________________________________*/
+/*___________________________________________________________________________*/
+
+/*** Footer ***/
+.footer .btn.btn-social {
+  margin-right: 5px;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--light);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 2px;
+  transition: 0.3s;
+}
+
+.footer .btn.btn-social:hover {
+  color: var(--primary);
+  border-color: var(--light);
+}
+
+.footer .btn.btn-link {
+  display: block;
+  margin-bottom: 5px;
+  padding: 0;
+  text-align: left;
+  font-size: 15px;
+  font-weight: normal;
+  text-transform: capitalize;
+  transition: 0.3s;
+}
+
+.footer .btn.btn-link::before {
+  position: relative;
+  content: "\f105";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  margin-right: 10px;
+}
+
+.footer .btn.btn-link:hover {
+  letter-spacing: 1px;
+  box-shadow: none;
+}
+
+.footer .form-control {
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.footer .copyright {
+  padding: 25px 0;
+  font-size: 15px;
+  border-top: 1px solid rgba(256, 256, 256, 0.1);
+}
+
+.footer .copyright a {
+  color: var(--light);
+}
+
+.footer .footer-menu a {
+  margin-right: 15px;
+  padding-right: 15px;
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer .footer-menu a:last-child {
+  margin-right: 0;
+  padding-right: 0;
+  border-right: none;
+}
+
+/*________________________________________________________________________*/
+/**/
