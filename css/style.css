@@ -394,7 +394,7 @@
   height: 600px;
   width: 52%;
   left: 35%;
-  top: -910px;
+  top: -100px;
 }
 .caja {
   display: none;
@@ -402,7 +402,7 @@
   align-items: center;
   position: absolute;
   border: 2px solid rgb(255, 255, 255);
-  height: 800px;
+  height: 600px;
   width: 97%;
   left: 1%;
   color: #000000;
@@ -424,7 +424,7 @@
   top: -200px;
   left: 35%;
   width: 750px;
-  height: 850px;
+  height: 0px;
 }
 .anyadirruta {
   position: absolute;
